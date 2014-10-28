@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		34B30A9A19F1E7DC00F1B512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B30A9919F1E7DC00F1B512 /* AppDelegate.swift */; };
 		34B30A9C19F1E7DC00F1B512 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B30A9B19F1E7DC00F1B512 /* Images.xcassets */; };
-		34B30A9F19F1E7DC00F1B512 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34B30A9D19F1E7DC00F1B512 /* MainMenu.xib */; };
+		34B30A9F19F1E7DC00F1B512 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34B30A9D19F1E7DC00F1B512 /* Settings.xib */; };
 		34B30AAB19F1E7DC00F1B512 /* PtorRunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B30AAA19F1E7DC00F1B512 /* PtorRunnerTests.swift */; };
+		34B30AC419F497CA00F1B512 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B30AC319F497CA00F1B512 /* AEXML.swift */; };
+		34B30AC619F4A58E00F1B512 /* Red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B30AC519F4A58E00F1B512 /* Red@2x.png */; };
+		34B30AC819F4A5BB00F1B512 /* Green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B30AC719F4A5BB00F1B512 /* Green@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,10 +31,13 @@
 		34B30A9819F1E7DC00F1B512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34B30A9919F1E7DC00F1B512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34B30A9B19F1E7DC00F1B512 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		34B30A9E19F1E7DC00F1B512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		34B30A9E19F1E7DC00F1B512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Settings.xib; sourceTree = "<group>"; };
 		34B30AA419F1E7DC00F1B512 /* PtorRunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PtorRunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B30AA919F1E7DC00F1B512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34B30AAA19F1E7DC00F1B512 /* PtorRunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PtorRunnerTests.swift; sourceTree = "<group>"; };
+		34B30AC319F497CA00F1B512 /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
+		34B30AC519F4A58E00F1B512 /* Red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Red@2x.png"; sourceTree = "<group>"; };
+		34B30AC719F4A5BB00F1B512 /* Green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 		34B30A8B19F1E7DC00F1B512 = {
 			isa = PBXGroup;
 			children = (
+				34B30ABC19F48C6E00F1B512 /* Resources */,
 				34B30A9619F1E7DC00F1B512 /* PtorRunner */,
 				34B30AA719F1E7DC00F1B512 /* PtorRunnerTests */,
 				34B30A9519F1E7DC00F1B512 /* Products */,
@@ -73,9 +80,10 @@
 		34B30A9619F1E7DC00F1B512 /* PtorRunner */ = {
 			isa = PBXGroup;
 			children = (
+				34B30AC319F497CA00F1B512 /* AEXML.swift */,
 				34B30A9919F1E7DC00F1B512 /* AppDelegate.swift */,
 				34B30A9B19F1E7DC00F1B512 /* Images.xcassets */,
-				34B30A9D19F1E7DC00F1B512 /* MainMenu.xib */,
+				34B30A9D19F1E7DC00F1B512 /* Settings.xib */,
 				34B30A9719F1E7DC00F1B512 /* Supporting Files */,
 			);
 			path = PtorRunner;
@@ -104,6 +112,15 @@
 				34B30AA919F1E7DC00F1B512 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		34B30ABC19F48C6E00F1B512 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				34B30AC719F4A5BB00F1B512 /* Green@2x.png */,
+				34B30AC519F4A58E00F1B512 /* Red@2x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,8 +203,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B30AC819F4A5BB00F1B512 /* Green@2x.png in Resources */,
 				34B30A9C19F1E7DC00F1B512 /* Images.xcassets in Resources */,
-				34B30A9F19F1E7DC00F1B512 /* MainMenu.xib in Resources */,
+				34B30A9F19F1E7DC00F1B512 /* Settings.xib in Resources */,
+				34B30AC619F4A58E00F1B512 /* Red@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B30AC419F497CA00F1B512 /* AEXML.swift in Sources */,
 				34B30A9A19F1E7DC00F1B512 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,12 +248,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		34B30A9D19F1E7DC00F1B512 /* MainMenu.xib */ = {
+		34B30A9D19F1E7DC00F1B512 /* Settings.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				34B30A9E19F1E7DC00F1B512 /* Base */,
 			);
-			name = MainMenu.xib;
+			name = Settings.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -393,6 +413,7 @@
 				34B30AB019F1E7DC00F1B512 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34B30AB119F1E7DC00F1B512 /* Build configuration list for PBXNativeTarget "PtorRunnerTests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +422,7 @@
 				34B30AB319F1E7DC00F1B512 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
