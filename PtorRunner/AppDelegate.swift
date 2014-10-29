@@ -16,6 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var PtorFolderLocation: NSTextField!
 
+    @IBOutlet weak var browserSelection: NSMatrix!
+    
     @IBOutlet weak var SaveButton: NSButton!
     
     var statusBar = NSStatusBar.systemStatusBar()
@@ -24,7 +26,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     @IBAction func SaveFolderLocation(sender: AnyObject) {
-        NSUserDefaults.standardUserDefaults().setObject("/\(PtorFolderLocation.stringValue)", forKey:"FolderLocation")
+        if(PtorFolderLocation.stringValue.substringToIndex(advance(PtorFolderLocation.stringValue.startIndex, 1)) != "/"){
+            PtorFolderLocation.stringValue = "/" + PtorFolderLocation.stringValue
+        }
+        
+        NSUserDefaults.standardUserDefaults().setObject("\(PtorFolderLocation.stringValue)", forKey:"FolderLocation")
         NSUserDefaults.standardUserDefaults().synchronize()
         self.window!.close()
     }
@@ -34,9 +40,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     
     func runTests(sender: AnyObject) {
+        var browserFlag = "--browser=chrome"
+        
+        if(browserSelection.selectedTag() == 2){
+            browserFlag = "--browser=firefox"
+        }
         var protractorFolderLocation = NSUserDefaults.standardUserDefaults().stringForKey("FolderLocation")!
+        
         let launchPath = "/usr/local/bin/node"
-        let arguments = ["\(protractorFolderLocation)/node_modules/protractor/bin/protractor", "\(protractorFolderLocation)/protractor.conf.js"]
+        let arguments = ["\(protractorFolderLocation)/node_modules/protractor/bin/protractor", browserFlag, "\(protractorFolderLocation)/protractor.conf.js"]
+        
         let (output, exitStatus) = runTask(launchPath, arguments: arguments)
         handleResults()
     }
